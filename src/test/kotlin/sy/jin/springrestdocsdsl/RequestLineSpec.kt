@@ -28,13 +28,13 @@ class RequestLineSpec(
     }
 
     fun parsePathVariables(): Array<Any> {
-        return pathVariableDescriptors.mapNotNull { it.attributes["example"] }.toTypedArray()
+        return pathVariableDescriptors.mapNotNull { it.attributes[AttributeNames.EXAMPLE] }.toTypedArray()
     }
 
     fun parseQueryParameters(): MockHttpServletRequestDsl.() -> Unit {
         return {
             this@RequestLineSpec.queryParameterDescriptors.forEach {
-                param(it.name, it.attributes["example"]!!.toString())
+                param(it.name, it.attributes[AttributeNames.EXAMPLE]!!.toString())
             }
         }
     }
