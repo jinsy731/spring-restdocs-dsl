@@ -1,0 +1,25 @@
+= Spring REST Docs
+:toc: left
+:toclevels: 2
+:sectlinks:
+:snippets: build/generated-snippets
+
+[[resources-post]]
+== Member
+
+[[resources-post-create]]
+=== getAll
+
+==== HTTP request
+
+include::{snippets}/test/request-fields.adoc[]
+
+==== HTTP response
+
+include::{snippets}/test/request-body.adoc[]
+include::{snippets}/multipart-form/request-part-req-fields.adoc[]
+include::{snippets}/multipart-form/path-parameters.adoc[]
+include::{snippets}/multipart-form/request-parts.adoc[]
+
+
+
